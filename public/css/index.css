@@ -1,0 +1,16 @@
+/* Add styles specific to the index page */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  li {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Add more styling for the index page as needed */
+  

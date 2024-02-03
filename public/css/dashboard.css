@@ -1,0 +1,16 @@
+/* Add styles specific to the dashboard page */
+.container {
+    text-align: center;
+  }
+  
+  h1 {
+    color: #3366cc;
+  }
+  
+  p {
+    margin-top: 10px;
+    color: #666;
+  }
+  
+  /* Add more styling for the dashboard page as needed */
+  

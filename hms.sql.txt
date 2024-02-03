@@ -1,0 +1,54 @@
+
+CREATE DATABASE hms;
+
+
+\c hms;
+
+
+CREATE TABLE students (
+    student_id SERIAL PRIMARY KEY,
+    student_name VARCHAR(100) NOT NULL,
+    gender VARCHAR(10) NOT NULL,
+    contact_number VARCHAR(15) NOT NULL,
+    email VARCHAR(100),
+    address TEXT
+);
+
+
+CREATE TABLE book_hostel (
+    booking_id SERIAL PRIMARY KEY,
+    student_id INT REFERENCES students(student_id),
+    hostel_name VARCHAR(50) NOT NULL,
+    room_number INT NOT NULL,
+    check_in_date DATE NOT NULL,
+    check_out_date DATE,
+    CONSTRAINT check_out_after_check_in CHECK (check_out_date >= check_in_date)
+);
+
+
+CREATE TABLE hostel_status (
+    hostel_name VARCHAR(50) PRIMARY KEY,
+    total_rooms INT NOT NULL,
+    available_rooms INT NOT NULL
+);
+
+
+CREATE TABLE dashboard (
+    dashboard_id SERIAL PRIMARY KEY,
+    total_students INT,
+    total_bookings INT,
+    total_hostels INT,
+    CONSTRAINT total_students_check CHECK (total_students >= 0),
+    CONSTRAINT total_bookings_check CHECK (total_bookings >= 0),
+    CONSTRAINT total_hostels_check CHECK (total_hostels >= 0)
+);
+
+
+INSERT INTO hostel_status (hostel_name, total_rooms, available_rooms) VALUES
+    ('Hostel A', 50, 50),
+    ('Hostel B', 40, 40),
+    ('Hostel C', 60, 60);
+
+
+INSERT INTO dashboard (total_students, total_bookings, total_hostels) VALUES
+    (0, 0, 3);

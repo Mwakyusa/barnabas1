@@ -1,0 +1,11 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/css/style.css')
+  link(rel='stylesheet', href='/css/bookings.css')
+
+block content
+  h1 Bookings
+  ul
+    each booking in bookings
+      li= `Hostel: ${booking.hostel_name}, Room: ${booking.room_number}`

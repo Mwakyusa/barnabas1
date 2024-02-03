@@ -1,0 +1,16 @@
+/* Add styles specific to the bookings page */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  li {
+    background-color: #e6f7ff;
+    border: 1px solid #99c2ff;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Add more styling for the bookings page as needed */
+  

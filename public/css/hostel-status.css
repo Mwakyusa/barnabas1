@@ -1,0 +1,16 @@
+/* Add styles specific to the hostel status page */
+ul {
+    list-style-type: none;
+    margin-top: 20px;
+  }
+  
+  li {
+    background-color: #e6ffe6;
+    border: 1px solid #66ff66;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Add more styling for the hostel status page as needed */
+  

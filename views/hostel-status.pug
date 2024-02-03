@@ -1,0 +1,11 @@
+extends layout
+
+block styles
+  link(rel='stylesheet', href='/css/style.css')
+  link(rel='stylesheet', href='/css/hostel-status.css')
+
+block content
+  h1 Hostel Status
+  ul
+    each status in hostelStatus
+      li= `Hostel: ${status.hostel_name}, Available Rooms: ${status.available_rooms}/${status.total_rooms}`
